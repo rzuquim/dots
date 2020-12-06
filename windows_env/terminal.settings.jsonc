@@ -1,0 +1,107 @@
+{
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+    "copyOnSelect": false,
+    "copyFormatting": false,
+    "profiles": {
+        "defaults": {},
+        "list": [
+            {
+                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+                "hidden": false,
+                "name": "Ubuntu",
+                "source": "Windows.Terminal.Wsl",
+                "startingDirectory": "/mnt/d/dev/",
+                "fontFace": "Meslo LG M for Powerline",
+                "fontSize": 10,
+                "antialiasingMode": "cleartype",
+                "colorScheme": "Desert"
+            },
+            {
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "name": "PowerShell",
+                "commandline": "powershell.exe -ExecutionPolicy Bypass -NoLogo -NoExit",
+                "startingDirectory": "D:\\dev",
+                "fontFace": "Meslo LG M for Powerline",
+                "fontSize": 10,
+                "hidden": false,
+                "antialiasingMode": "cleartype",
+                "colorScheme": "Desert"
+            },
+            {
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "name": "cmd",
+                "commandline": "cmd.exe",
+                "hidden": true
+            }
+        ]
+    },
+    "schemes": [
+        {
+            "name": "Desert",
+            "black": "#4d4d4d",
+            "red": "#FF6188",
+            "green": "#98fb98",
+            "yellow": "#f0e68c",
+            "blue": "#cd853f",
+            "purple": "#ffdead",
+            "cyan": "#ffa0a0",
+            "white": "#f5deb3",
+            "brightBlack": "#555555",
+            "brightRed": "#ff5555",
+            "brightGreen": "#55ff55",
+            "brightYellow": "#ffff55",
+            "brightBlue": "#87ceff",
+            "brightPurple": "#ff55ff",
+            "brightCyan": "#ffd700",
+            "brightWhite": "#ffffff",
+            "background": "#333333",
+            "foreground": "#ffffff"
+        }
+    ],
+    "keybindings": [
+        {
+            "command": {
+                "action": "copy",
+                "singleLine": false
+            },
+            "keys": "ctrl+c"
+        },
+        {
+            "command": "paste",
+            "keys": "ctrl+v"
+        },
+        {
+            "command": "find",
+            "keys": "ctrl+shift+f"
+        },
+        {
+            "command": "toggleFullscreen",
+            "keys": "F11"
+        },
+        {
+            "command": {
+                "action": "splitPane",
+                "split": "auto",
+                "splitMode": "duplicate"
+            },
+            "keys": "alt+shift+d"
+        },
+        {
+            "command": {
+                "action": "splitPane",
+                "split": "auto",
+                "profile": "Ubuntu"
+            },
+            "keys": "alt+shift+1"
+        },
+        {
+            "command": {
+                "action": "splitPane",
+                "split": "auto",
+                "profile": "PowerShell"
+            },
+            "keys": "alt+shift+2"
+        }
+    ]
+}
