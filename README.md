@@ -23,6 +23,12 @@ Alternatively, to update while avoiding the confirmation prompt:
 ```bash
 set -- -f; source bootstrap.sh
 ```
+## Git setup
+
+```bash 
+sudo npm install -g commitizen
+```
+
 ## Python dev env
 
 Install poetry with 
