@@ -4,15 +4,15 @@ cd "$(dirname "${BASH_SOURCE}")";
 
 git pull origin main;
 
+cd ./linux_env
+
 function doIt() {
 	rsync --exclude ".git/" \
 		--exclude ".DS_Store" \
-		--exclude ".osx" \
 		--exclude "bootstrap.sh" \
 		--exclude "README.md" \
-		--exclude "LICENSE-MIT.txt" \
-		-avh --no-perms ./linux_env ~;
-	source ~/.bash_profile;
+		-avh --no-perms . ~;
+	source ~/.bashrc;
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
@@ -24,4 +24,6 @@ else
 		doIt;
 	fi;
 fi;
+
 unset doIt;
+cd ..
