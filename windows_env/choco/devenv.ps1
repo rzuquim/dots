@@ -10,9 +10,10 @@ cinst firacode
 # dotnet
 cinst dotnetcore-sdk
 cinst netfx-4.5.1-devpack
+cinst netfx-4.6.1-devpack
 cinst netfx-4.7.2-devpack
 
-# javascript 
+# javascript
 cinst nodejs
 cinst type --version 3.7.2
 npm install -g coffee@1.12.6

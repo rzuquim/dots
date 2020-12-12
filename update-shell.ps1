@@ -3,7 +3,7 @@ function confirm($path) {
     $confirm = Read-Host -Prompt "There is already a $path available. Are you sure you want to overwrite it? (y/N)"
     if (-not $confirm.StartsWith('y') -and -not $confirm.StartsWith('Y')) {
         exit
-    }   
+    }
 }
 
 # ##############
