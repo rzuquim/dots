@@ -13,7 +13,7 @@
         "<C-c>": false,
         "<C-v>": false,
         "<C-f>": false,
-        "<C-k>": false,
+        "<C-k>": false
     },
     "vim.statusBarColorControl": true,
     "vim.statusBarColors.normal": [ "#8FBCBB", "#000" ],

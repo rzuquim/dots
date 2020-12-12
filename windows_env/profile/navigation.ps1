@@ -10,16 +10,16 @@ function moveToGrandpa() { Set-Location ..\..}
 function moveToHome() { Set-Location ~ }
 function moveToRoot() { Set-Location / }
 
-function mkd($path) { 
-    mkdir $path 
+function mkd($path) {
+    mkdir $path
     cd $path
 }
 
-function grep($search) { 
+function grep($search) {
     Select-String -Pattern $search
 }
 
-function goto($search) { 
+function goto($search) {
     try {
         j $search
     } catch {
