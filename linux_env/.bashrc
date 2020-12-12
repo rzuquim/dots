@@ -1,10 +1,10 @@
 # environment
 # export WSLENV=$WSLENV:LOG_OUTPUT/p
 DEV_ENV='/mnt/d/dev'
-export DOCKER_VOLUMES='/mnt/d/docker/volumes' 
+export DOCKER_VOLUMES='/mnt/d/docker/volumes'
 
 # ---------------------
-# bash configs  
+# bash configs
 # ---------------------
 
 # Case-insensitive globbing (used in pathname expansion)

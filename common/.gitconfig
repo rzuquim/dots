@@ -9,45 +9,45 @@
     date = relative
 
 [color "blame"]
-    highlightRecent = green,12 month ago,white,1 month ago,black red 
+    highlightRecent = green,12 month ago,white,1 month ago,black red
 
 [alias]
     #commit every change
     aa = !git add -A
     ci = !git add -A && git commit -m
     amend = commit -a --amend
-    m = merge --ff-only 
+    m = merge --ff-only
 
     #status
     s = status -sb
-    
+
     #branch
     b = branch -a
     last-branches = "!git for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"
 
     move-branch = branch -f
     squash = rebase -i HEAD~5
-    
+
     #small log with relative date
     ls = log --graph --pretty=format:"%C(yellow)%h%Creset\\ -%Cred%d\\ %C(magenta)[%cn]\\ %Creset%s\\ %Cgreen(%ad)" --decorate --date=relative
     short-hash = "!git rev-parse --short HEAD | clip"
 
     #list all aliases
     aliases = "!git config -l | grep alias | cut -c 7-"
-    
+
     #check-out this awesome new branch!
     co = "!f() { git checkout $1 2>/dev/null || git checkout -b $1; }; f"
-   
+
     #delete local branch
     del-branch = branch -D
-    
+
     #mergetool and diff tool
     dt = difftool --no-prompt
     mt = mergetool
     changes = difftool --no-prompt HEAD^ HEAD
-    
+
     #revert changes to last commit
-    undo = checkout -- 
+    undo = checkout --
     wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard && git clean -fd
     soft-unstage = !git reset --soft HEAD^ && git reset
 
@@ -55,7 +55,7 @@
     po = pull origin
     f = fetch origin
     fp = fetch origin --prune
-    
+
     #track remote branch
     track = branch --track
 
