@@ -15,8 +15,8 @@ function mkd($path) {
     cd $path
 }
 
-function grep($search) {
-    Select-String -Pattern $search
+function lsl {
+  gci .
 }
 
 function goto($search) {
@@ -28,7 +28,6 @@ function goto($search) {
     Get-ChildItem -Recurse -Directory -Filter "$search*" | select -First 1 | %{$_.FullName} | cd
 }
 
-Set-Alias '..' moveToParent
 Set-Alias '..' moveToParent
 Set-Alias '...' moveToGrandpa
 Set-Alias home moveToHome

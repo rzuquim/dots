@@ -1,5 +1,5 @@
-function grep($search) { 
-    Select-String -Pattern $search
+function grep($keyword) {
+  $input | Out-String -Stream | Select-String $keyword
 }
 
 function wc {

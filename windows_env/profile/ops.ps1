@@ -12,3 +12,7 @@ function logs($subFolder, $file = '') {
     ii $_.FullName
   }
 }
+
+function svc {
+  Get-Service
+}
