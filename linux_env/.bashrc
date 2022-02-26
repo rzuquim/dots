@@ -1,3 +1,8 @@
+# tmux as default
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  tmux attach -t default || tmux new -s default || echo 'could not open tmux'
+fi
+
 # environment
 # export WSLENV=$WSLENV:LOG_OUTPUT/p
 DEV_ENV='/mnt/d/dev'
@@ -112,5 +117,4 @@ fi
 # ---------------------
 # poetry
 # --------------------
-
 PATH=$PATH:$HOME/.poetry/bin
