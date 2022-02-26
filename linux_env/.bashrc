@@ -88,6 +88,11 @@ mkd () {
     cd -P -- "$1"
 }
 
+# --------------
+#  inoa
+# --------------
+alias inoa-vpn='sudo openvpn --config /etc/secrets/inoa-vpn-g2-beta2.ovpn --auth-user-pass /etc/secrets/vpn-pwd --daemon'
+
 # ---------------------
 # customize env
 # ---------------------
