@@ -104,7 +104,8 @@ alias bash-refresh='source ~/.bashrc'
 # env config
 # ---------------------
 # export GREP_OPTIONS=' — color=auto'
-export EDITOR=vim
+export VISUAL=vim
+export EDITOR="$VISUAL"
 
 # ---------------------
 # stats
