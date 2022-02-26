@@ -1,3 +1,4 @@
+
 # tmux as default
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
   tmux attach -t default || tmux new -s default || echo 'could not open tmux'
@@ -53,6 +54,8 @@ alias apt-search='apt-cache search'
 alias grep='grep --color=auto'
 alias python=python3
 alias pip=pip3
+alias clip='xclip -sel clip'
+alias goto='z'
 
 # --------------------
 # docker
@@ -121,3 +124,13 @@ fi
 # poetry
 # --------------------
 PATH=$PATH:$HOME/.poetry/bin
+
+# ---------------------
+# z
+# --------------------
+. ~/apps/z/z.sh
+
+# ---------------------
+# LS_COLORS
+# ---------------------
+export LS_COLORS='rs=0:di=01;97;104:'
