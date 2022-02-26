@@ -8,6 +8,9 @@ fi
 DEV_ENV='/mnt/d/dev'
 export DOCKER_VOLUMES='/mnt/d/docker/volumes'
 
+# ignoring history duplicate
+export HISTCONTROL=ignoreboth
+
 # ---------------------
 # bash configs
 # ---------------------
