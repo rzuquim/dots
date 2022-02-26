@@ -1,9 +1,10 @@
 # basic
 cinst sysinternals
 cinst microsoft-windows-terminal
+cinst cascadia-code-nerd-font
+cinst terminal-icons.powershell
 cinst 7zip
 cinst git
-cinst get-childitemcolor
 cinst mousewithoutborders
 cinst winscp
 cinst ditto
