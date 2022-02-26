@@ -18,3 +18,13 @@ function wc {
 function unixtimestamp() {
     [int][double]::parse((get-date -UFormat %s))
 }
+
+function head {
+  param(
+      [Parameter(ValueFromPipeline=$true)] $file,
+      $size
+  )
+  if (-not $size) { $size = 1024 }
+  $bytes = Get-Content $file -Encoding byte -TotalCount $size
+  [System.Text.Encoding]::UTF8.GetString($bytes)
+}
