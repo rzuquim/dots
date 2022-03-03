@@ -158,3 +158,6 @@ _dotnet_bash_complete()
 }
 
 complete -f -F _dotnet_bash_complete dotnet
+
+# vim mode on bash
+set -o vi
