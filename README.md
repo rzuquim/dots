@@ -50,3 +50,4 @@ poetry completions bash | sudo tee /etc/bash_completion.d/poetry.bash-completion
 ## Thanks to…
 
 * [Mathias Bynens](https://mathiasbynens.be/) and his [dotfiles repository](https://github.com/mathiasbynens/dotfiles)
+* [Derek Taylor](https://www.youtube.com/channel/UCVls1GmFKf6WlTraIb_IaJg) and his [dotfiles repository](https://gitlab.com/dwt1/dotfiles)

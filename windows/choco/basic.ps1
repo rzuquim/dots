@@ -6,7 +6,6 @@ cinst terminal-icons.powershell
 cinst 7zip
 cinst git
 cinst mousewithoutborders
-cinst filezilla
 cinst ditto
 cinst everything
 
@@ -18,3 +17,5 @@ cinst awk
 
 cinst flameshot
 cinst openvpn
+cinst gzip
+
