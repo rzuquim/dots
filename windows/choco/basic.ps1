@@ -5,9 +5,11 @@ cinst cascadia-code-nerd-font
 cinst terminal-icons.powershell
 cinst 7zip
 cinst git
+cinst poshgit
 cinst mousewithoutborders
 cinst winscp
 cinst ditto
 cinst everything
 cinst ripgrep
 cinst bat
+cinst flameshot

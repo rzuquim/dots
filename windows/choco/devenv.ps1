@@ -27,4 +27,5 @@ cinst nunit
 cinst nunit-extension-nunit-v2-driver
 cinst nunit-extension-vs-project-loader
 cinst reportgenerator.portable
-npm install -g commitizen
+
+npm install -g commitizen cz-conventional-changelog

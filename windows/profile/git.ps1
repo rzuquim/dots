@@ -15,3 +15,5 @@ function on-github($path = '/tree/@branch') {
     write-host "navigating to: $http"
     start-process -FilePath $http
 }
+
+Import-Module 'C:\tools\poshgit\dahlbyk-posh-git-9bda399\src\posh-git.psd1'
