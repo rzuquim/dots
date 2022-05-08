@@ -15,8 +15,8 @@ cinst netfx-4.7.2-devpack
 
 # javascript
 cinst nodejs
-cinst type --version 3.7.2
-npm install -g coffee@1.12.6
+npm install -g coffeescript@1.12.6
+npm install -g typescript@4.4
 
 # ci / cd
 cinst psake

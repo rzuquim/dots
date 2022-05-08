@@ -16,8 +16,8 @@ if (confirm("~/.gitconfig")) {
 # Vim
 # ##############
 
-if (confirm("~/.ideavimrc")) {
-  cp .\common\.vimrc ~/.ideavimrc -Force
+if (confirm("~/.vimrc")) {
+  Get-Content .\common\.vimrc, .\common\.ideavimrc | Set-Content ~/.ideavimrc
   cp .\common\.vimrc ~/.vimrc -Force
 }
 

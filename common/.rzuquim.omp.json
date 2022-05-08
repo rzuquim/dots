@@ -239,20 +239,8 @@
         {
           "foreground": "#21c7c7",
           "style": "plain",
-          "template": "\u2570\u2500",
+          "template": "\u2570\u2500 ",
           "type": "text"
-        },
-        {
-          "foreground": "#e0f8ff",
-          "foreground_templates": [
-            "{{ if gt .Code 0 }}#ef5350{{ end }}"
-          ],
-          "properties": {
-            "always_enabled": true
-          },
-          "style": "plain",
-          "template": "\ue285\ufb00 ",
-          "type": "exit"
         }
       ],
       "type": "prompt"
