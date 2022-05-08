@@ -22,14 +22,21 @@ if (confirm("~/.ideavimrc")) {
 }
 
 # ##############
+# Prompt
+# ##############
+if (confirm("~/.rzuquim.omp.json")) {
+  cp .\common\.rzuquim.omp.json ~/.rzuquim.omp.json -Force
+}
+
+# ##############
 # Profile
 # ##############
 
 if (confirm($PROFILE)) {
   $profileDir = Split-Path $PROFILE
-  cp .\windows_env\profile.ps1 $PROFILE -Force
+  cp .\windows\profile.ps1 $PROFILE -Force
   rm $profileDir\profile -Recurse -Force
-  cp .\windows_env\profile $profileDir -Recurse -Force
+  cp .\windows\profile $profileDir -Recurse -Force
 }
 
 & $profile

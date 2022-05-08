@@ -1,6 +1,3 @@
-Import-Module posh-git
-Import-Module oh-my-posh
-
 function on-gitlab($path = '/-/network/@branch') {
     $ssh = git config --get remote.origin.url
     $branch = git rev-parse --abbrev-ref HEAD

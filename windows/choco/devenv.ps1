@@ -3,12 +3,12 @@
 # editors
 cinst sublimetext3
 cinst vscode
+cinst insomnia-rest-api-client
 cinst jetbrains-rider
 cinst glogg
-cinst firacode
 
 # dotnet
-cinst dotnetcore-sdk
+cisnt dotnet-sdk
 cinst netfx-4.5.1-devpack
 cinst netfx-4.6.1-devpack
 cinst netfx-4.7.2-devpack
@@ -17,11 +17,10 @@ cinst netfx-4.7.2-devpack
 cinst nodejs
 cinst type --version 3.7.2
 npm install -g coffee@1.12.6
-npm install -g yo
 
 # ci / cd
 cinst psake
-cinst ssms
+cinst sql-server-management-studio
 cinst nuget.commandline
 cinst opencover
 cinst nunit

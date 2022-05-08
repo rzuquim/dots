@@ -9,3 +9,5 @@ cinst mousewithoutborders
 cinst winscp
 cinst ditto
 cinst everything
+cinst ripgrep
+cinst bat

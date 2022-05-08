@@ -3,4 +3,4 @@
 # or from HKEY_LOCAL_MACHINE (and reboot), depending on which section of the registry you changed.
 
 Write-host "Biding your CASPLOCK key to ESC!"
-ii .\capslock_to_esc.reg
+ii .\windows\setup\capslock_to_esc.reg

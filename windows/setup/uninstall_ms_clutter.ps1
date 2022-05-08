@@ -43,3 +43,6 @@ rm -Force -ErrorAction SilentlyContinue "$env:userprofile\AppData\Roaming\Micros
 
 echo "Removing scheduled task"
 Get-ScheduledTask -TaskPath '\' -TaskName 'OneDrive*' -ea SilentlyContinue | Unregister-ScheduledTask -Confirm:$false
+
+# Cortana
+Get-AppxPackage -allusers Microsoft.549981C3F5F10 | Remove-AppxPackage

@@ -1,6 +1,5 @@
-function grep($keyword) {
-  $input | Out-String -Stream | Select-String $keyword
-}
+Set-Alias -Name grep -Value rg -Option AllScope
+Set-Alias -Name cat -Value bat -Option AllScope
 
 function wc {
     param(

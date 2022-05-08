@@ -12,10 +12,6 @@ function mkd($path) {
     cd $path
 }
 
-function lsl {
-  gci .
-}
-
 function goto($search) {
     try {
         j $search
