@@ -7,7 +7,7 @@ cinst 7zip
 cinst git
 cinst poshgit
 cinst mousewithoutborders
-cinst winscp
+cinst filezilla
 cinst ditto
 cinst everything
 cinst ripgrep
