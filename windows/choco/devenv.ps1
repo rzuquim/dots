@@ -28,4 +28,7 @@ cinst nunit-extension-nunit-v2-driver
 cinst nunit-extension-vs-project-loader
 cinst reportgenerator.portable
 
-npm install -g commitizen cz-conventional-changelog
+npm install -g commitizen@4.2.2
+npm install -g jest-cli
+npm install -g tslint
+

@@ -13,3 +13,4 @@ cinst everything
 cinst ripgrep
 cinst bat
 cinst flameshot
+cinst openvpn
