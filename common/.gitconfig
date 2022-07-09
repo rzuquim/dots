@@ -70,7 +70,6 @@
 [core]
   autocrlf = true
   excludesfile = %HOMEPATH%\\gitignore_global.txt
-  editor = code --wait
 [diff]
   tool = vscode
 [difftool "vscode"]

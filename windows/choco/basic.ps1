@@ -5,7 +5,6 @@ cinst cascadia-code-nerd-font
 cinst terminal-icons.powershell
 cinst 7zip
 cinst git
-cinst poshgit
 cinst mousewithoutborders
 cinst filezilla
 cinst ditto
