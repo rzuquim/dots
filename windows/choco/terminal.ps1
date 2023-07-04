@@ -1,6 +1,5 @@
 # terminal
 
-cinst Jump-Location
 cinst poshgit
 cinst oh-my-posh
 
