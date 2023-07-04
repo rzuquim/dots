@@ -9,7 +9,12 @@ cinst mousewithoutborders
 cinst filezilla
 cinst ditto
 cinst everything
+
 cinst ripgrep
 cinst bat
+cinst fzf
+cinst fd
+cinst awk
+
 cinst flameshot
 cinst openvpn
