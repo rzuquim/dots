@@ -1,10 +1,10 @@
 # devenv
 
 # editors
-cinst sublimetext3
+cinst nvim
 cinst vscode
-cinst insomnia-rest-api-client
 cinst jetbrains-rider
+cinst insomnia-rest-api-client
 cinst glogg
 
 # dotnet
@@ -27,8 +27,8 @@ cinst nunit
 cinst nunit-extension-nunit-v2-driver
 cinst nunit-extension-vs-project-loader
 cinst reportgenerator.portable
+cinst awscli
 
 npm install -g commitizen@4.2.2
 npm install -g jest-cli
 npm install -g tslint
-

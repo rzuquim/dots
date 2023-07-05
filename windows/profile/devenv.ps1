@@ -9,3 +9,8 @@ Register-ArgumentCompleter -Native -CommandName dotnet -ScriptBlock {
            [System.Management.Automation.CompletionResult]::new($_, $_, 'ParameterValue', $_)
         }
 }
+
+# AWS
+function aws-local {
+  aws --endpoint-url=http://localhost:4566 $args
+}
