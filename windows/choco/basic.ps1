@@ -1,7 +1,7 @@
 # basic
 cinst sysinternals
 cinst microsoft-windows-terminal
-cinst cascadia-code-nerd-font
+cinst nerd-fonts-cascadiacode
 cinst terminal-icons.powershell
 cinst 7zip
 cinst git
