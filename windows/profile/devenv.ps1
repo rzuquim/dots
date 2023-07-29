@@ -14,3 +14,9 @@ Register-ArgumentCompleter -Native -CommandName dotnet -ScriptBlock {
 function aws-local {
   aws --endpoint-url=http://localhost:4566 $args
 }
+
+# editor
+function neo {
+  neovide --frame none $args
+}
+
