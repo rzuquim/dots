@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+case $(setxkbmap -query | grep layout | awk '{ print $2; exit }') in
+  us) setxkbmap br -variant abnt2 ;;
+  br) setxkbmap us -variant intl ;;
+  *) setxkbmap us -variant intl ;;
+esac

@@ -1,0 +1,149 @@
+# If you come from bash you might have to change your $PATH.
+export VISUAL=nvim
+export EDITOR="$VISUAL"
+export PATH=$HOME/.local/bin:$HOME/bin:/usr/local/bin:$PATH
+export BROWSER="brave"
+# ignoring history duplicate
+export HISTCONTROL=ignoreboth
+
+# path to your oh-my-zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
+
+# clipboard config
+export CM_SELECTIONS="clipboard"
+export CM_DEBUG=0
+export CM_OUT_CLIP=0
+export CM_MAX_CLIPS=100
+
+# auto completes
+# add wisely, as too many plugins slow down shell startup.
+plugins=(
+  git
+  archlinux
+  docker
+  docker-compose
+  dotnet
+  npm
+  systemd
+  z
+)
+
+source $ZSH/oh-my-zsh.sh
+
+# user configuration
+eval "$(oh-my-posh init zsh --config ~/.config/.rzuquim.omp.json)"
+
+# key bindings
+bindkey -v              # vim mode on zsh
+
+# ---------------------
+# aliases
+# ---------------------
+alias q='exit'
+alias c='clear'
+alias h='history'
+alias pd='pwd'
+alias mkdir='mkdir -p'
+alias ls='exa -la --group-directories-first'
+alias diff='colordiff'
+alias vi='nvim'
+alias vim='nvim'
+alias nv='neovide'
+alias null='/dev/null'
+alias grep='rg --color=auto'
+alias cat='bat'
+alias clip='xclip -sel c'
+alias screenkey-stop='pkill -f screenkey'
+alias inoa-vpn='sudo openvpn --config /etc/secrets/inoa-vpn.ovpn --auth-user-pass /etc/secrets/vpn-pwd --daemon'
+
+# ---------------------
+# navigation
+# ---------------------
+# using fd as default fzf finder (following links, including hidden files and excluding useless directories)
+export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow --exclude node_modules --exclude .git'
+
+function freq {
+    nvim $(
+        z -r |
+        awk '{ print $2 " " $1 }' |
+        fzf |
+        awk '{ print $1 }'
+    )
+}
+
+function config {
+    cd ~/.config
+    cd $(
+        ls --icons | awk '{ print $7 " " $8 }' |
+        fzf |
+        awk '{ print $2 }'
+    ) && nvim .
+}
+
+# ---------------------
+# paths
+# ---------------------
+alias q='exit'
+alias home='cd ~'
+alias root='cd /'
+alias o=xdg-open
+alias ..='cd ..'
+alias ...='cd ..; cd ..'
+alias ....='cd ..; cd ..; cd ..'
+
+# executing the work script on the current proccess so we can cd into the working directory
+alias work='git-change-ssh-keys inoa && source work'
+
+# ---------------------
+# settings
+# ---------------------
+alias wifi-on='sudo nmcli radio wifi on'
+alias wifi-off='sudo nmcli radio wifi off'
+alias wifi='nmcli dev wifi'
+
+alias brigthness='xrandr --output eDP-1 --brightness'
+
+# ---------------------
+# functions
+# --------------------
+
+# create a dir even if it does not exist
+function mkd {
+    mkdir -p -- "$1" &&
+    cd -P -- "$1"
+}
+
+# search the contents of every file
+function search {
+   rg -p "$@" -A 3 -B 3 --color=always | less -RMFXK
+}
+
+# ---------------------
+# stats
+# --------------------
+function count-lines {
+  find . -name "*.$1" | xargs wc -l
+}
+
+# ---------------------
+# hdmi
+# --------------------
+alias hdmi=xrandr --output HDMI-1 --auto
+
+# ---------------------
+# nvm - node version manager
+# ---------------------
+source /usr/share/nvm/init-nvm.sh
+
+# --------------------
+# auto suggestions
+# --------------------
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# --------------------
+# context navigation
+# --------------------
+if [[ -f "$HOME/.context" ]]; then
+    currentWorkspace=`cat ~/.context | awk '{ print $2}'`
+    cd $currentWorkspace
+fi

@@ -1,0 +1,6 @@
+[Default Applications]
+x-scheme-handler/msteams=teams.desktop
+x-scheme-handler/tg=org.telegram.desktop.desktop
+
+[Added Associations]
+x-scheme-handler/tg=userapp-Telegram Desktop-B6B9P1.desktop;org.telegram.desktop.desktop;

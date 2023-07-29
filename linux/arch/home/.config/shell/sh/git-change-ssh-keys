@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+pvt_key="$HOME/.ssh/id_ed25519"
+pub_key="$pvt_key.pub"
+
+# checking if private / pub keys are not links (not following the desired convention)
+if [ -f "$pvt_key" ] && [ ! -L "$pvt_key" ]; then
+    echo "Private key is not a link!"
+    exit -1
+fi
+
+if [ -f "$pub_key" ] && [ ! -L "$pub_key" ]; then
+    echo "Public key is not a link!"
+    exit -1
+fi
+
+# deleting and pointing the symlinks to the desired secrets
+if [ -f "$pvt_key" ]; then
+    rm $pvt_key
+fi
+
+if [ -f "$pub_key" ]; then
+    rm $pub_key
+fi
+
+ln -s /etc/secrets/rzuquim_$1 $pvt_key
+ln -s /etc/secrets/rzuquim_$1.pub $pub_key
+
