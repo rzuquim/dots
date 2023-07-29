@@ -27,3 +27,11 @@ function head {
   $bytes = Get-Content $file -Encoding byte -TotalCount $size
   [System.Text.Encoding]::UTF8.GetString($bytes)
 }
+
+function shutdown {
+  shutdown.exe /p /f
+}
+
+function reboot {
+  shutdown.exe /r /f
+}
