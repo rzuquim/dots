@@ -20,3 +20,5 @@ choco feature enable -n=allowGlobalConfirmation
 . .\windows\setup\uninstall_ms_clutter.ps1
 . .\windows\setup\environment_variables.ps1
 . .\windows\setup\nuget_sources_config.ps1
+. .\windows\setup\bg-random-schedule.ps1
+
