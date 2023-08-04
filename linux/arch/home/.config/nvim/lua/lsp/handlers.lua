@@ -86,7 +86,7 @@ local function lsp_keymaps(bufnr)
     vim.api.nvim_buf_set_keymap(bufnr, "n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
 
     -- TODO: find out what this is
-    -- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
+    vim.api.nvim_buf_set_keymap(bufnr, "n", "<C-.>", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
     -- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>f", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
 end
 

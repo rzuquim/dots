@@ -96,6 +96,7 @@ local plugins = {
     "akinsho/bufferline.nvim", -- buffer headers (like tabs)
     "moll/vim-bbye", -- closes windows without never exiting nvim
     'nvim-lualine/lualine.nvim', -- status line
+    "norcalli/nvim-colorizer.lua", -- hex color detection
 
     'folke/tokyonight.nvim',
     'tanvirtin/monokai.nvim',

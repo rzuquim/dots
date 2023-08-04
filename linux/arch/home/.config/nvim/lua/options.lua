@@ -34,14 +34,16 @@ local options = {
     sidescrolloff = 8, -- always at least 8 columns when scrolling left
     colorcolumn = "120", -- marker to set the desired max length
 
-    -- using persitent undos
-    undodir = os.getenv("HOME") .. "/.vim/undodir",
     undofile = true,
 
     termguicolors = true, -- i like good colors
     updatetime = 300, -- and fast update times
     list = true, -- show redundant spaces
 }
+
+if os then -- does not work in windows
+    options.undodir = os.getenv("HOME") .. "/.vim/undodir" -- using persitent undos
+end
 
 -- reading every options prop and setting into the action vim.opt
 for k, v in pairs(options) do

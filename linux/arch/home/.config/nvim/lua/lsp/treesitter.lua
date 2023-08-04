@@ -5,7 +5,7 @@ if not status_ok then
 end
 
 treesitter.setup {
-    -- 
+    --
     ensure_installed = {
         "bash",
         "c_sharp",
@@ -19,6 +19,7 @@ treesitter.setup {
         "lua",
         "scss",
         "sql",
+        "rust",
         "toml",
         "tsx",
         "typescript",
@@ -42,7 +43,6 @@ treesitter.setup {
     highlight = {
         -- `false` will disable the whole extension
         enable = true,
-
         -- uncomment if language is buggy
         -- disable = { "c", "rust" },
 
@@ -54,7 +54,6 @@ treesitter.setup {
                 return true
             end
         end,
-
         -- disabling regex highlight since it is known to be buggy and slow
         additional_vim_regex_highlighting = false,
     },

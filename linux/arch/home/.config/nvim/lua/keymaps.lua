@@ -29,11 +29,8 @@ keymap("n", "<C-Up>", "<C-w>k") -- focus up
 keymap("n", "<C-Down>", "<C-w>j") -- focus down
 keymap("n", "<C-Left>", "<C-w>h") -- focus left
 keymap("n", "<C-Right>", "<C-w>l") -- focus right
-
-keymap("n", "<A-k>", ":resize +2<CR>") -- resize up
-keymap("n", "<A-j>", ":resize -2<CR>") -- resize down
-keymap("n", "<A-h>", ":vertical resize -2<CR>") -- resize left
-keymap("n", "<A-l>", ":vertical resize +2<CR>") -- resize right
+keymap("n", "<A-->", ":vertical resize -2<CR>") -- resize left
+keymap("n", "<A-+>", ":vertical resize +2<CR>") -- resize right
 
 keymap("n", "<C-A-k>", "<C-w>K") -- move window up
 keymap("n", "<C-A-j>", "<C-w>J") -- move window down
@@ -62,8 +59,8 @@ keymap("v", "<leader>u", ":Sort u<CR>") -- eliminate duplicates and sort in the 
 keymap("n", "<leader>e", ":NvimTreeFindFileToggle<CR>") -- open file explorer
 
 -- Quick Selection
-keymap("n", "vv", "v$") -- select line
-keymap("n", "vw", "bve") -- select word
+keymap("n", "vv", "^v$") -- select line
+keymap("n", "<C-a>", "GVgg") -- select all text
 
 -- Navigation
 keymap("n", "<S-l>", ":bnext<CR>")
@@ -71,6 +68,9 @@ keymap("n", "<S-h>", ":bprevious<CR>")
 
 keymap("n", "<C-d>", "<C-d>zz")
 keymap("n", "<C-u>", "<C-u>zz")
+
+keymap("n", "<A-Left>", "<C-O>")
+keymap("n", "<A-Right>", "<C-I>")
 
 -- Clipboard
 keymap("v", "p", '"_dP') -- preventing clipboard overwrite behavior on replace
@@ -101,3 +101,11 @@ keymap("v", "<leader>C.", "gs.") -- dot.case
 
 -- Quit everything writing all buffers to the disk
 keymap("n", "<leader>w", ":wqa!<CR>")
+
+if vim.g.neovide then
+    -- zoom on neovide
+    keymap("n", "<C-+>", ":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.1<CR>") -- bigger font
+    keymap("n", "<C-->", ":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor - 0.1<CR>") -- smaller font
+    keymap("n", "<C-=>", ":lua vim.g.neovide_scale_factor = 1.0<CR>") -- smaller font
+end
+

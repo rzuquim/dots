@@ -27,14 +27,16 @@ local servers = {
     "cucumber_language_server",
     "dockerls",
     "eslint",
-    "hls", -- haskell (requires ghcup-hs-bin)
+    -- "hls", -- haskell (requires ghcup-hs-bin)
     "html",
     "jsonls",
     "lemminx", -- xml
-    "marksman", -- markdown
-    "omnisharp", -- csharp
-    "sqlls",
     "lua_ls",
+    "marksman", -- markdown
+    -- "omnisharp", -- csharp
+    "csharp_ls",
+    "rust_analyzer",
+    "sqlls",
     "taplo", -- toml
     "tsserver",
     "yamlls",
