@@ -106,6 +106,5 @@ if vim.g.neovide then
     -- zoom on neovide
     keymap("n", "<C-+>", ":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.1<CR>") -- bigger font
     keymap("n", "<C-->", ":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor - 0.1<CR>") -- smaller font
-    keymap("n", "<C-=>", ":lua vim.g.neovide_scale_factor = 1.0<CR>") -- smaller font
+    keymap("n", "<C-=>", ":lua vim.g.neovide_scale_factor = 1.0<CR>") -- regular size
 end
-

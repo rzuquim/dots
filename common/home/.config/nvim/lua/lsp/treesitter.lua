@@ -12,7 +12,6 @@ treesitter.setup {
         "css",
         "dockerfile",
         "gitignore",
-        "help",
         "html",
         "javascript",
         "json",
@@ -25,6 +24,10 @@ treesitter.setup {
         "typescript",
         "vim",
         "yaml",
+    },
+
+    ignore_install = {
+        "help",
     },
 
     -- Install parsers synchronously (only applied to `ensure_installed`)

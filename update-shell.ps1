@@ -19,6 +19,8 @@ if (confirm("~/.gitconfig")) {
 if (confirm("~/.vimrc")) {
   Get-Content .\common\.vimrc, .\common\.ideavimrc | Set-Content ~/.ideavimrc
   cp .\common\.vimrc ~/.vimrc -Force
+  rm -Recurse -Force $env:LOCALAPPDATA\nvim
+  cp -Recurse .\common\home\.config\nvim $env:LOCALAPPDATA\nvim
 }
 
 # ##############

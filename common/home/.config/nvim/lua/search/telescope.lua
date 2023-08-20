@@ -52,7 +52,10 @@ telescope.setup {
 
 }
 
-telescope.load_extension('fzf')
+local current_os = jit.os
+if not string.match(current_os, 'Win') then -- does not work in windows
+  telescope.load_extension('fzf')
+end
 
 -- neoclip stores the clipboard history
 local neoclip_status_ok, neoclip = pcall(require, "neoclip")
