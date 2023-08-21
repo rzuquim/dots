@@ -5,6 +5,7 @@ choco install nerd-fonts-cascadiacode
 choco install 7zip
 choco install git
 choco install gitui
+choco install poshgit
 choco install ditto
 choco install everything
 

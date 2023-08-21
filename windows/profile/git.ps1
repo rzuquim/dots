@@ -1,3 +1,7 @@
+
+# slow to load, but adds git autocomplete
+Import-Module posh-git
+
 function on-gitlab($path = '/-/network/@branch') {
     $ssh = git config --get remote.origin.url
     $branch = git rev-parse --abbrev-ref HEAD

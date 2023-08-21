@@ -32,21 +32,6 @@ source bootstrap.sh
 ./update-shell.ps1
 ```
 
-## Python dev env
-
-Install poetry with
-
-```bash
-curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
-```
-
-and then add bash auto-completion with
-
-```bash
-poetry completions bash | sudo tee /etc/bash_completion.d/poetry.bash-completion
-```
-
-
 ## Thanks to…
 
 * [Mathias Bynens](https://mathiasbynens.be/) and his [dotfiles repository](https://github.com/mathiasbynens/dotfiles)
