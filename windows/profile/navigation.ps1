@@ -1,4 +1,3 @@
-Import-Module Terminal-Icons
 Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
 
 function moveToParent() { Set-Location ..}

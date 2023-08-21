@@ -1,34 +1,34 @@
 # devenv
 
 # editors
-cinst nvim
-cinst vscode
-cinst jetbrains-rider
-cinst insomnia-rest-api-client
-cinst glogg
+choco install nvim
+choco install vscode
+choco install jetbrains-rider
+choco install insomnia-rest-api-client
+choco install glogg
 
 # dotnet
 cisnt dotnet-sdk
-cinst netfx-4.5.1-devpack
-cinst netfx-4.6.1-devpack
-cinst netfx-4.7.2-devpack
+choco install netfx-4.5.1-devpack
+choco install netfx-4.6.1-devpack
+choco install netfx-4.7.2-devpack
 
 # javascript
-cinst nodejs
+choco install nodejs
 npm install -g coffeescript@1.12.6
 npm install -g typescript@4.4
 
 # ci / cd
-cinst psake
-cinst sql-server-management-studio
-cinst nuget.commandline
-cinst opencover
-cinst nunit
-cinst nunit-extension-nunit-v2-driver
-cinst nunit-extension-vs-project-loader
-cinst reportgenerator.portable
-cinst awscli
+choco install psake
+choco install sql-server-management-studio
+choco install nuget.commandline
+choco install opencover
+choco install nunit
+choco install nunit-extension-nunit-v2-driver
+choco install nunit-extension-vs-project-loader
+choco install reportgenerator.portable
+choco install awscli
 
 npm install -g commitizen@4.2.2
 npm install -g jest-cli
-npm install -g tslint
+npm install -g prettier

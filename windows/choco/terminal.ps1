@@ -1,7 +1,5 @@
 # terminal
-
-cinst poshgit
-cinst oh-my-posh
+choco install oh-my-posh
 
 ## Powerline
 git clone https://github.com/powerline/fonts.git

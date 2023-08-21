@@ -1,10 +1,10 @@
 # communication / media
-cinst brave
-cinst telegram
-cinst whatsapp
-cinst microsoft-teams
+choco install brave
+choco install telegram
+choco install whatsapp
+choco install microsoft-teams
 
 # video
-cinst vlc
-cinst ffmpeg
-cinst screentogif
+choco install vlc
+choco install ffmpeg
+choco install screentogif
