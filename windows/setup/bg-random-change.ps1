@@ -1,4 +1,4 @@
-. $env:HOME\.dotfiles\windows\profile\bg-random.ps1
+. $env:HOMEPATH\.dots\windows\profile\bg-random.ps1
 
 bg-random
 

@@ -1,7 +1,7 @@
 
 function bg-random {
   # Specify the path to the folder containing your background images
-  $ImagePath = "$env:HOME/.dotfiles/common/wallpapers"
+  $ImagePath = "$env:HOMEPATH/.dots/common/wallpapers"
 
 # Get all image files from the specified folder
   $ImageFiles = Get-ChildItem -Path $ImagePath -Filter "*.jpg" -File

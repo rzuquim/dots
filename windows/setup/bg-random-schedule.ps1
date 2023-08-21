@@ -1,4 +1,4 @@
-$ScriptFile = "$env:HOME\.dotfiles\windows\setup\bg-random-change.ps1"
+$ScriptFile = "$env:HOMEPATH\.dots\windows\setup\bg-random-change.ps1"
 $Action = New-ScheduledTaskAction -Execute "powershell.exe" -Argument "-File $ScriptFile"
 $Trigger = New-ScheduledTaskTrigger -AtLogOn
 $Settings = New-ScheduledTaskSettingsSet
