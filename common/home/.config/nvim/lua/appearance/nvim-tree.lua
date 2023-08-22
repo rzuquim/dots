@@ -1,6 +1,5 @@
 local status_ok, nvim_tree = pcall(require, "nvim-tree")
-local config_status_ok, nvim_tree_config = pcall(require, "nvim-tree.config")
-if not status_ok or not config_status_ok then
+if not status_ok then
     vim.notify("Could not load nvim tree. Falling back to Lex.")
     vim.api.nvim_set_keymap("n", "<leader>e", ":Lex 30<CR>", { noremap = true, silent = true })
     return
@@ -53,9 +52,6 @@ nvim_tree.setup {
     view = {
         hide_root_folder = false,
         side = "left",
-        mappings = {
-            custom_only = true
-        }
     },
     actions = {
         open_file = {

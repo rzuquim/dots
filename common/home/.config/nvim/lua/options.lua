@@ -41,8 +41,11 @@ local options = {
     list = true, -- show redundant spaces
 }
 
-if os then -- does not work in windows
-    options.undodir = os.getenv("HOME") .. "/.vim/undodir" -- using persitent undos
+-- using persitent undos
+if IsWindows() then
+  options.undodir = os.getenv("APPDATA") .. "/.vim/undodir"
+else
+  options.undodir = os.getenv("HOME") .. "/.vim/undodir"
 end
 
 -- reading every options prop and setting into the action vim.opt

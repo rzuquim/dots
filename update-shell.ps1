@@ -27,7 +27,11 @@ if (confirm("~/.vimrc")) {
 # Prompt
 # ##############
 if (confirm("~/.rzuquim.omp.json")) {
-  cp .\common\.rzuquim.omp.json ~/.rzuquim.omp.json -Force
+  cp ./common/.rzuquim.omp.json ~/.rzuquim.omp.json -Force
+}
+
+if (confirm("~/.config/starship.toml")) {
+  cp ./common/home/.config/starship.toml ~/.config/starship.toml -Force
 }
 
 # ##############

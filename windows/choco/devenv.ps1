@@ -2,7 +2,6 @@
 
 # editors
 choco install nvim
-choco install vscode
 choco install jetbrains-rider
 choco install insomnia-rest-api-client
 choco install glogg
@@ -15,6 +14,8 @@ choco install netfx-4.7.2-devpack
 
 # javascript
 choco install nodejs
+choco install nvm.install
+
 npm install -g coffeescript@1.12.6
 npm install -g typescript@4.4
 

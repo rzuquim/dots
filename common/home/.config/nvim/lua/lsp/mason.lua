@@ -33,8 +33,8 @@ local servers = {
     "lemminx", -- xml
     "lua_ls",
     "marksman", -- markdown
-    -- "omnisharp", -- csharp
-    "csharp_ls",
+    "omnisharp", -- csharp
+    -- "csharp_ls",
     "rust_analyzer",
     "sqlls",
     "taplo", -- toml
