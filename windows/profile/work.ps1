@@ -6,7 +6,7 @@ function work() {
     --max-depth 5 `
     --exclude .cache --exclude .asdf --exclude .local --exclude .cargo --exclude node-modules `
     --exclude bin --exclude obj `
-    --prune ^.git$ $env:HOMEPATH\dev | `
+    --prune ^.git$ D:\dev | `
   split-path -Parent | Select-Object { "[" + [System.IO.Path]::GetFileName($_) + "] " + $_ } | `
   Format-Table -HideTableHeaders ` |
   fzf | `

@@ -10,6 +10,9 @@ function dots {
 }
 
 function inoa {
-  . 'D:\dev\inoa\ops\cli\src\bin\Release\net6.0\Inoa.Cli.exe'
+    Param(
+      [string[]]$Passthrough
+    )
+  . 'D:\dev\inoa\ops\cli\src\bin\Release\net6.0\Inoa.Cli.exe' @Passthrough
 }
 
