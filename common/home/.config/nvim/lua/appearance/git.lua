@@ -5,7 +5,8 @@ end
 
 local status_ok, gitsigns = pcall(require, "gitsigns")
 if not status_ok then
-    vim.notify("Coult not gitsigns. Not showing git changes and stuff.")
+    -- trying to reduce the number of plugins
+    -- vim.notify("Coult not gitsigns. Not showing git changes and stuff.")
     return
 end
 

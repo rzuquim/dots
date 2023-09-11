@@ -46,7 +46,6 @@ local plugins = {
     "nvim-lua/plenary.nvim", -- useful lua util functions used in lots of plugins
     "Pocco81/auto-save.nvim", -- auto saves file
     "folke/which-key.nvim", -- leader keybinding help
-    "lewis6991/impatient.nvim", -- load time optimizer
 
     -- text manipulation
     'sQVe/sort.nvim', -- sort selection
@@ -83,13 +82,14 @@ local plugins = {
     -- hightlight
     "nvim-tree/nvim-web-devicons", -- trouble dependency
     "folke/trouble.nvim", -- hightlights issues inline
-    'lewis6991/gitsigns.nvim', -- git indicators
+    -- 'lewis6991/gitsigns.nvim', -- git indicators
 
     -- navigation
     "nvim-telescope/telescope.nvim", -- fuzzy search
     { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }, -- using native program
     { "AckslD/nvim-neoclip.lua", requires = { 'kkharji/sqlite.lua', module = 'sqlite' } }, -- clipboard history
     'kyazdani42/nvim-tree.lua', -- file explorer
+    {"akinsho/toggleterm.nvim", tag = '*'}, -- terminal
 
     -- appearance
     'xiyaowong/nvim-transparent', -- making sure we have a transparent bg regardless of the theme
