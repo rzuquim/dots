@@ -1,5 +1,5 @@
 # terminal
-choco install oh-my-posh
+choco install starship
 
 ## Powerline
 git clone https://github.com/powerline/fonts.git
