@@ -23,7 +23,7 @@ choco install openvpn
 choco install gzip
 
 # powershelll completion
-choco install poshgit
+Install-Module -Name posh-git -Force -AllowClobber
 Install-Module -Name posh-cargo
 Install-Module -Name npm-completion
 Install-Module -Name DockerCompletion
