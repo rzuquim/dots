@@ -78,7 +78,6 @@ keymap("n", "<leader>y", ':Telescope neoclip theme=ivy<CR>') -- search in clipbo
 
 -- Search and replace
 keymap("n", "<Esc>", ":noh<CR>") -- remove search highlight
-keymap("v", "/", 'y<Esc>:/<C-R>"<CR>') -- search all occurences of selected text
 keymap("v", "<C-f>", 'y<Esc>:/<C-R>"<CR>') -- search all occurences of selected text
 keymap("v", "<C-h>", 'y<Esc>:%s/<C-R>"//g<Left><Left>') -- replace all occurences of selected text
 keymap("n", "<C-f>", ":Telescope current_buffer_fuzzy_find theme=ivy<CR>") -- search in current file
@@ -100,7 +99,7 @@ keymap("v", "<leader>C-", "gs-") -- kebab-case
 keymap("v", "<leader>C.", "gs.") -- dot.case
 
 -- Quit everything writing all buffers to the disk
-keymap("n", "<leader>w", ":wqa!<CR>")
+keymap("n", "<leader>w", ":qa!<CR>")
 
 if vim.g.neovide then
     -- zoom on neovide

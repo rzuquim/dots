@@ -7,6 +7,7 @@ choco install git
 choco install gitui
 choco install ditto
 choco install everything
+choco install neovide
 
 choco install ripgrep
 choco install bat
@@ -14,7 +15,7 @@ choco install fzf
 choco install fd
 choco install awk
 choco install tldr
-choco install wingw # gcc compiler
+choco install mingw # gcc compiler
 choco install powertoys # gcc compiler
 choco install delta
 

@@ -20,5 +20,5 @@ function aws-local {
 
 # editor
 function neo {
-  neovide --frame none $args
+  neovide $args
 }
