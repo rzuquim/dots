@@ -4,3 +4,8 @@ Invoke-Expression (&starship init powershell)
 Set-PSReadlineOption -EditMode vi
 Set-PSReadLineOption -ViModeIndicator Prompt
 Set-PSReadLineOption -BellStyle None
+
+function dots {
+  neovide $env:HOMEPATH/.dots/
+}
+
