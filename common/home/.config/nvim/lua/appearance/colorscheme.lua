@@ -1,10 +1,11 @@
 local current_hour = os.date('%H')
 local colorscheme
 
-if tonumber(current_hour) > 17 then 
+if tonumber(current_hour) > 17 then
     colorscheme = "tokyonight" -- night time
 else
-    colorscheme = "monokai" -- day time
+   -- colorscheme = "monokai" -- day time
+    colorscheme = "tokyonight" -- always using tokyo now
 end
 
 local status_ok, scheme = pcall(require, colorscheme)
