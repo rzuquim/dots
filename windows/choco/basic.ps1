@@ -16,8 +16,11 @@ choco install awk
 choco install tldr
 choco install wingw # gcc compiler
 choco install powertoys # gcc compiler
+choco install delta
 
 choco install flameshot
 choco install openvpn
 choco install gzip
-
+# powershelll completion
+choco install poshgit
+Install-Module -Name npm-completion
