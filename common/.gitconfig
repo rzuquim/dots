@@ -23,8 +23,7 @@
   s = status -sb
 
   #branch
-  b = branch -a
-  last-branches = "!git for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"
+  b = "!git for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))' refs/heads/* refs/remotes/*/*"
 
   move-branch = branch -f
   squash = rebase -i HEAD~5
