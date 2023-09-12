@@ -6,7 +6,7 @@ Set-PSReadLineOption -ViModeIndicator Prompt
 Set-PSReadLineOption -BellStyle None
 
 function dots {
-  cd $env:HOMEPATH/.dots/
+  cd $env:USERPROFILE/.dots/
   neovide .
 }
 

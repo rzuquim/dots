@@ -10,6 +10,12 @@ nnoremap <silent> L :action NextTab<CR>
 
 nnoremap <leader>f  :action ReformatCode<CR>
 
+" comments
+nnoremap <leader>cc :action CommentByLineComment<CR>
+nnoremap <leader>cb :action CommentByBlockComment<CR>
+vnoremap <leader>cc :action CommentByLineComment<CR>
+vnoremap <leader>cb :action CommentByBlockComment<CR>
+
 vnoremap <silent> <C-n> :action SelectNextOccurrence<CR>
 
 " ide bypass
