@@ -21,6 +21,7 @@ choco install delta
 
 choco install flameshot
 choco install openvpn
+choco install warp
 choco install gzip
 
 # powershelll completion

@@ -7,10 +7,11 @@ choco install insomnia-rest-api-client
 choco install glogg
 
 # dotnet
-cisnt dotnet-sdk
 choco install netfx-4.5.1-devpack
 choco install netfx-4.6.1-devpack
 choco install netfx-4.7.2-devpack
+choco install dotnet-6.0-sdk # specific LTS
+choco install dotnet-sdk # latest version
 
 # javascript
 choco install nodejs
