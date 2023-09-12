@@ -81,6 +81,11 @@
 
 [merge]
   conflictstyle = diff3
+  tool = nvim
+
+[mergetool "nvim"]
+  cmd = "nvim -d $MERGED $LOCAL $BASE $REMOTE -c 'wincmd J | wincmd ='"
+  trustExitCode = true
 
 [interactive]
   diffFilter = delta --color-only

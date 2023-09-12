@@ -1,3 +1,8 @@
+
+if IsDiff() then
+  return
+end
+
 local status_ok, nvim_tree = pcall(require, "nvim-tree")
 if not status_ok then
     vim.notify("Could not load nvim tree. Falling back to Lex.")
