@@ -33,5 +33,6 @@ function shutdown {
 }
 
 function reboot {
-  shutdown.exe /r /f
+  Restart-Computer -Force
 }
+
