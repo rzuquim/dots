@@ -18,6 +18,9 @@ vnoremap <leader>cb :action CommentByBlockComment<CR>
 
 vnoremap <silent> <C-n> :action SelectNextOccurrence<CR>
 
+" window management
+nnoremap <leader>e :action HideAllWindows<CR>
+
 " ide bypass
 sethandler <C-S-6> a:vim
 sethandler <C-A> a:ide

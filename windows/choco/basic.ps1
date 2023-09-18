@@ -8,6 +8,7 @@ choco install gitui
 choco install ditto
 choco install everything
 choco install neovide
+choco install obsidian
 
 choco install ripgrep
 choco install bat

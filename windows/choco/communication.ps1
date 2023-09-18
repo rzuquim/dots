@@ -2,7 +2,8 @@
 choco install brave
 choco install telegram
 choco install whatsapp
-choco install microsoft-teams
+choco install zoom
+choco install mremoteng
 
 # video
 choco install vlc
