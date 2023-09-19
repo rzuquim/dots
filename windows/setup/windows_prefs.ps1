@@ -7,3 +7,11 @@ if (-Not (Test-Path $RegistryPath)) {
 }
 Set-ItemProperty -Path $RegistryPath -Name $ValueName -Value 1
 
+# Disable snipping tool
+$RegistryPath = "HKCU:\Control Panel\Keyboard"
+$ValueName = "PrintScreenKeyForSnippingEnabled"
+if (-Not (Test-Path $RegistryPath)) {
+    New-Item -Path $RegistryPath -Force
+}
+Set-ItemProperty -Path $RegistryPath -Name $ValueName -Value 0
+
