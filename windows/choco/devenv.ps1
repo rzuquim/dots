@@ -13,6 +13,8 @@ choco install netfx-4.7.2-devpack
 choco install dotnet-6.0-sdk # specific LTS
 choco install dotnet-sdk # latest version
 
+dotnet tool install --global dotnet-trace
+
 # javascript
 choco install nodejs
 choco install nvm.install
