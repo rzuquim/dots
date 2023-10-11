@@ -31,7 +31,8 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # user configuration
-eval "$(oh-my-posh init zsh --config ~/.config/.rzuquim.omp.json)"
+# eval "$(oh-my-posh init zsh --config ~/.config/.rzuquim.omp.json)"
+eval "$(starship init zsh)"
 
 # key bindings
 bindkey -v              # vim mode on zsh

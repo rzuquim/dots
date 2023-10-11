@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 TARGET=${1:-$HOME}
 pushd "$(dirname "${BASH_SOURCE}")" > /dev/null
@@ -8,22 +8,20 @@ function doIt() {
     --exclude ".git/" \
     --exclude ".DS_Store" \
     --exclude "bootstrap.sh" \
+    --exclude ".editorconfig" \
     --exclude "README.md" \
+    --exclude "TODO.md" \
     -avh --no-perms . $TARGET > /dev/null
 }
+
 echo "This may overwrite existing files in your home directory ($TARGET)."
 read -p "Are you sure? (y/N) " -n 1
+echo ""
 
 # ==================
-echo ""
 echo -n "🏠 Home ... "
-# ==================
 if [[ $REPLY =~ ^[Yy]$ ]]; then
   pushd ./common > /dev/null
-  doIt
-  popd > /dev/null
-
-  pushd ./linux/common > /dev/null
   doIt
   popd > /dev/null
 
@@ -39,10 +37,15 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     popd > /dev/null
   fi
 fi
+echo "✔️"
 
+# ==================
+echo -n "🔗 Symlinks ... "
 # link to configuration files
-ln -s $TARGET/config/shell/zshrc $TARGET/.zshrc
 
+if [ ! -L "$TARGET/.zshrc" ]; then
+  ln -s $TARGET/.config/shell/zshrc $TARGET/.zshrc
+fi
 echo "✔️"
 
 unset doIt
