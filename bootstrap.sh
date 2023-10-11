@@ -25,7 +25,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   doIt
   popd > /dev/null
 
-  DISTRO=$(hostnamectl | grep 'Operating System')
+  DISTRO=$(hostnamectl | grep 'Operating System') > /dev/null
 
   if [[ $DISTRO =~ .*"Arch".* ]]; then
     pushd ./linux/arch/home > /dev/null
@@ -44,7 +44,7 @@ echo -n "🔗 Symlinks ... "
 # link to configuration files
 
 if [ ! -L "$TARGET/.zshrc" ]; then
-  ln -s $TARGET/.config/shell/zshrc $TARGET/.zshrc
+  ln -s $TARGET/.config/shell/zshrc $TARGET/.zshrc > /dev/null
 fi
 echo "✔️"
 

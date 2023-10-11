@@ -148,3 +148,9 @@ if [[ -f "$HOME/.context" ]]; then
     currentWorkspace=`cat ~/.context | awk '{ print $2}'`
     cd $currentWorkspace
 fi
+
+# --------------------
+# env vars
+# --------------------
+source ~/.config/shell/.env.sh
+
