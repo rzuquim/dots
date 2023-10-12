@@ -28,7 +28,6 @@ which_key.register(
         },
         g = {
             name = " git",
-            g = { " gitui" },
             c = { " commits" },
             b = { " branches" }
         },

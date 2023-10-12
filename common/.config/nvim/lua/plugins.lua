@@ -89,7 +89,6 @@ local plugins = {
     { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }, -- using native program
     { "AckslD/nvim-neoclip.lua", requires = { 'kkharji/sqlite.lua', module = 'sqlite' } }, -- clipboard history
     'kyazdani42/nvim-tree.lua', -- file explorer
-    {"akinsho/toggleterm.nvim", tag = '*'}, -- terminal
 
     -- appearance
     'xiyaowong/nvim-transparent', -- making sure we have a transparent bg regardless of the theme
