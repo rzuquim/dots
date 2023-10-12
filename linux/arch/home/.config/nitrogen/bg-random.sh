@@ -4,7 +4,7 @@
 export DISPLAY=":0"
 
 # Defining the directory with wallpapers
-BG_DIR=$HOME/.dotfiles/common/wallpapers
+BG_DIR=$HOME/wallpapers
 
 # Nitrogen config directory
 NITROGEN_DIR=$HOME/.config/nitrogen
