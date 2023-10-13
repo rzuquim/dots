@@ -76,7 +76,7 @@ myPP = xmobarPP
     , ppWsSep   = ""
     , ppTitle   = xmobarColor myBrightGreen "" . pad
     , ppLayout  = xmobarColor myBrightMagenta ""
-    , ppVisible = xmobarColor myYellow "" . wrap "[" "]"                   -- visible in secondary monitor  
+    , ppVisible = xmobarColor myYellow "" . wrap "[" "]"                   -- visible in secondary monitor
     , ppExtras  = [ windowCount ]
     }
 
@@ -95,7 +95,7 @@ myKeys =
     , ( "M-S-v"          , spawn myClipMenuSelect                                      )
 
     -- Navigation
-    , ( "M-<Tab>"        , windows W.focusUp                                           ) -- tab last 
+    , ( "M-<Tab>"        , windows W.focusUp                                           ) -- tab last
     , ( "M-<Escape>"     , moveTo Next (Not emptyWS)                                   ) -- tab next workspace
     , ( "M-S-<Escape>"   , moveTo Prev (Not emptyWS)                                   ) -- tab prev workspace
     , ( "M-S-t"          , withFocused $ windows . W.sink                              ) -- Push window back into tiling
@@ -123,7 +123,7 @@ myKeys =
 myScreenshotCmd   = "flameshot gui"
 
 myDmenuOptions = "-fn 'Caskaydia'" ++ " -nb '" ++ myBlack ++ "' -nf '" ++ myBrightYellow ++ "' -sb '" ++ myRed ++ "' -sf '" ++ myBrightWhite ++ "' -i"
-myRecompileCmd    = "xmonad --recompile && xmonad --restart" 
+myRecompileCmd    = "xmonad --recompile && xmonad --restart"
 myDmenuCmd        = "dmenu_run " ++ myDmenuOptions
 myClipMenuSelect  = "clipmenu " ++ myDmenuOptions
 
@@ -139,12 +139,12 @@ myStartupHook = do
 -- To find the property name associated with a program, use  xprop | grep WM_CLASS and click on the client you're interested in.
 -- To match on the WM_NAME, you can use 'title' in the same way that
 -- 'className' and 'resource' are used below.
-myManageHook = 
+myManageHook =
         manageSpecific
     <+> namedScratchpadManageHook scratchpads
-    where 
+    where
     manageSpecific = composeOne
-        [ className =? "Brave-browser"              -?> viewShift "www"  
+        [ className =? "Brave-browser"              -?> viewShift "www"
         , className =? "Microsoft Teams - Preview"  -?> viewShift "comm"
         , className =? "Whatsapp-for-linux"         -?> viewShift "comm"
         , className =? "TelegramDesktop"            -?> viewShift "comm"
@@ -174,7 +174,7 @@ myManageHook =
 -- ============
 --  layoutHook
 -- ============
-myLayoutHook = smartBorders $ avoidStruts $  myTiled ||| myTabbed ||| myFull
+myLayoutHook = smartBorders $ avoidStruts $  myTabbed ||| myFull ||| myTiled
     where
         myTabbed = renamed [Replace " <fn=2>\xe47a</fn> "] $ tabbedBottom shrinkText def
             { fontName            = myFont
@@ -203,16 +203,16 @@ myHandleEventHook = swallowEventHook (className =? "Alacritty" <||> className =?
 -- ============
 --  scratchpads
 -- ============
-scratchpads = 
-    [ 
+scratchpads =
+    [
     NS "terminal" spawnTerm findTerm manageTerm
 --    NS "terminal" "alacritty" (resource =? "scratchpad") defaultFloating
-    ] 
-    where 
+    ]
+    where
     spawnTerm  = myTerminal ++ " -t scratchpad"
     findTerm   = title =? "scratchpad"
     manageTerm = customFloating $ W.RationalRect l t w h
-        where 
+        where
         h = 0.9
         w = 0.9
         t = 0.95 -h
