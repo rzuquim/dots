@@ -48,6 +48,15 @@ if [ ! -L "$TARGET/.zshrc" ]; then
 fi
 echo "✔️"
 
+# ==================
+echo -n "⚙️ Specific configs ... "
+
+# .ideavim concat
+cat ~/.vimrc ~/.ideavimrc > ~/.ideavimrc.tmp
+mv ~/.ideavimrc.tmp ~/.ideavimrc
+
+echo "✔️"
+
 unset doIt
 popd > /dev/null
 
