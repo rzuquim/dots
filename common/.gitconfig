@@ -29,7 +29,7 @@
   squash = rebase -i HEAD~5
 
   #small log with relative date
-  ls = log --graph --pretty=format:"%C(yellow)%h%Creset\\ -%Cred%d\\ %C(magenta)[%cn]\\ %Creset%s\\ %Cgreen(%ad)" --decorate --date=relative --max-count=25
+  ls = log --graph --pretty=format:"%C(yellow)%h%Creset\\ -%Cred%d\\ %C(magenta)[%cn]\\ %Creset%s\\ %Cgreen(%ad)" --decorate --date=relative --max-count=50
   new = log --pretty=format:"%C(yellow)%h%Creset\\ %s" origin/latest..HEAD
   missing = log --pretty=format:"%C(yellow)%h%Creset\\ %s" HEAD..origin/latest
   short-hash = "!git rev-parse --short HEAD | clip"

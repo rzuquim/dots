@@ -20,7 +20,7 @@ if (confirm("~/.vimrc")) {
   Get-Content .\common\.vimrc, .\common\.ideavimrc | Set-Content ~/.ideavimrc
   cp .\common\.vimrc ~/.vimrc -Force
   rm -Recurse -Force $env:LOCALAPPDATA\nvim
-  cp -Recurse .\common\home\.config\nvim $env:LOCALAPPDATA\nvim
+  cp -Recurse .\common\.config\nvim $env:LOCALAPPDATA\nvim
 }
 
 # ##############
@@ -31,7 +31,7 @@ if (confirm("~/.rzuquim.omp.json")) {
 }
 
 if (confirm("~/.config/starship.toml")) {
-  cp ./common/home/.config/starship.toml ~/.config/starship.toml -Force
+  cp ./common/.config/starship.toml ~/.config/starship.toml -Force
 }
 
 # ##############

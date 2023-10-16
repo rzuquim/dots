@@ -13,3 +13,8 @@ function work() {
   awk '{ print $2 }' |
   Set-Location
 }
+
+function inoa {
+  & D:\dev\ops\cli\src\bin\Debug\net6.0\Inoa.Cli.exe $args
+}
+
