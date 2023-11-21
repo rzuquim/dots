@@ -1,5 +1,11 @@
 
 function work() {
+  if ($args.Count -eq 0) {
+    $query = ""
+  } else {
+    $query = "-q $args"
+  }
+
   fd `
     --type directory `
     --unrestricted `
@@ -9,7 +15,7 @@ function work() {
     --prune ^.git$ D:\dev | `
   split-path -Parent | Select-Object { "[" + [System.IO.Path]::GetFileName($_) + "] " + $_ } | `
   Format-Table -HideTableHeaders ` |
-  fzf | `
+  fzf -1 $query | `
   awk '{ print $2 }' |
   Set-Location
 }
