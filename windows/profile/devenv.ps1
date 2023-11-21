@@ -12,6 +12,7 @@ Register-ArgumentCompleter -Native -CommandName dotnet -ScriptBlock {
 }
 
 Import-Module npm-completion
+Import-Module DockerCompletion
 
 # AWS
 function aws-local {
