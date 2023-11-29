@@ -13,10 +13,10 @@ nnoremap <silent> <Esc> :noh<CR>
 filetype plugin indent on
 
 " Identation
-set tabstop     =2
-set softtabstop =2
-set shiftwidth  =2
-set expandtab
+set tabstop     =4                " insert 2 spaces for a tab
+set softtabstop =4                " insert 2 spaces for a tab
+set shiftwidth  =4                " the number of spaces inserted for each indentation
+set expandtab                     " convert tabs to spaces
 
 " set <leader> to <space>
 let mapleader = " "
@@ -25,6 +25,7 @@ let mapleader = " "
 nnoremap <silent> l f.
 nnoremap <silent> h F.
 nnoremap <silent> X 0d$jw
+nnoremap <silent> <C-/> :vsplit<CR>
 
 set noerrorbells
 set vb t_vb=

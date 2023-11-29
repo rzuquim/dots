@@ -7,6 +7,8 @@ function IsDiff()
   return vim.api.nvim_win_get_option(0, "diff")
 end
 
+vim.cmd('source ~/.vimrc')
+
 require "options"
 require "keymaps"
 require "plugins"
