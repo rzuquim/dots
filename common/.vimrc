@@ -37,3 +37,7 @@ vnoremap = =gv
 
 " make Y behave like D and C, yanking till end of line
 map Y y$
+
+" closing quick fix window after selection
+:autocmd FileType qf nnoremap <buffer> <CR> <CR>:cclose<CR>
+
