@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+xinput list | awk -F '\t' '/AT/ {print $2} ' | awk -F '=' '{print $2}' | xargs xinput enable
+
