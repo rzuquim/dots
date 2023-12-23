@@ -4,6 +4,18 @@ function confirm($path) {
     return $confirm.StartsWith('y') -or $confirm.StartsWith('Y')
 }
 
+# creates a link to powershell 7 profile
+$ps7Profile = "$env:OneDrive\Documentos\PowerShell\Microsoft.PowerShell_profile.ps1"
+
+if (-not (Test-Path $ps7Profile)) {
+    $oldPsProfileDir = "$env:OneDrive\Documentos\WindowsPowerShell\"
+    $ps7ProfileDir = Split-Path $ps7Profile -Parent
+    Write-Host $ps7ProfileDir
+    Remove-Item -Recurse -Force $ps7ProfileDir
+    New-Item -ItemType SymbolicLink -Path $ps7ProfileDir -Value $oldPsProfileDir
+    Write-Host "PS7 Setup"
+}
+
 # ##############
 # Git
 # ##############
