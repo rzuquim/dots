@@ -22,10 +22,8 @@ set expandtab                     " convert tabs to spaces
 let mapleader = " "
 
 " optimizing movements
-nnoremap <silent> l f.
-nnoremap <silent> h F.
 nnoremap <silent> X 0d$jw
-nnoremap <silent> <C-/> :vsplit<CR>
+nnoremap <silent> <C-/> :vsplit<CR>:bnext<CR>
 
 set noerrorbells
 set vb t_vb=
@@ -41,3 +39,5 @@ map Y y$
 " closing quick fix window after selection
 :autocmd FileType qf nnoremap <buffer> <CR> <CR>:cclose<CR>
 
+" closing all buffer and reopening the last one
+nnoremap <leader>we :%bd\|e#<CR>

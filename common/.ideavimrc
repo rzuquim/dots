@@ -20,6 +20,10 @@ vnoremap <silent> <C-n> :action SelectNextOccurrence<CR>
 
 " window management
 nnoremap <leader>e :action HideAllWindows<CR>
+nnoremap <leader>we :action CloseAllEditorsButActive<CR>
+
+nnoremap <C-Left> :action PrevSplitter<CR>
+nnoremap <C-Right> :action NextSplitter<CR>
 
 " ide bypass
 sethandler <C-S-6> a:vim
@@ -51,5 +55,5 @@ sethandler <C-[> a:vim
 sethandler <C-\> a:ide
 sethandler <C-]> a:ide
 
-sethandler <C-S-Right> a:ide
-sethandler <C-S-Left> a:ide
+sethandler <C-Left> a:vim
+sethandler <C-Right> a:vim
